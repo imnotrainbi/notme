@@ -1,0 +1,9 @@
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #a786ff;
+  font-style: italic;
+  font-family: 'Pacifico', cursive;
+  margin-top: 3rem;
+  user-select: none;
+}
