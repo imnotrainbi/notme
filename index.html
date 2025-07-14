@@ -4,68 +4,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zayzay | im not rain bi</title>
-  <!-- Nueva tipografía dreamy -->
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display&family=Pacifico&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Tipos de letra -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+
   <style>
     body {
-      background: url('https://www.transparenttextures.com/patterns/stardust.png'), #0d1b2a;
-      color: #f8f8ff;
-      font-family: 'Playfair Display', serif;
+      margin: 0;
       padding: 2rem;
-      line-height: 1.6;
+      font-family: 'Raleway', sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png'), #0d1b2a;
       background-repeat: repeat;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      animation: float 6s ease-in-out infinite;
     }
 
     header h1 {
-      font-size: 3rem;
-      color: #ffe2f2;
-      font-family: 'Pacifico', cursive;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.8rem;
+      color: #ffe6fa;
+      margin-bottom: 0.5rem;
     }
 
     header p {
-      font-size: 1.2rem;
-      color: #a786ff;
+      font-size: 1rem;
       font-style: italic;
+      color: #c6baff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
     }
 
     nav a {
-      background: #1b263b;
-      color: #f8f8ff;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+      background: #1e293b;
+      color: #fefefe;
+      padding: 0.6rem 1.2rem;
+      border-radius: 1.2rem;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, background 0.3s;
+      font-weight: bold;
     }
 
     nav a:hover {
-      background: #415a77;
-      color: #ffbbf0;
+      background: #334155;
+      transform: scale(1.08);
     }
 
     main {
-      background: #1e2a38;
-      color: #f8f8ff;
+      max-width: 850px;
+      margin: auto;
+      background: #1b2534;
+      border: 3px dashed #ffe6fa;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      animation: float 7s ease-in-out infinite;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
 
     .card {
-      background: #32455a;
+      background: #2e3a50;
       color: #fff;
-      box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+      border: 2px solid #ffc6e2;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s;
     }
 
     .card:hover {
-      background: #536d8f;
-      color: #ffd3f8;
+      transform: translateY(-6px);
+      box-shadow: 0 6px 20px rgba(255,255,255,0.2);
+      background: #3b4d66;
     }
 
     footer {
-      color: #c9bfff;
-      font-family: 'Pacifico', cursive;
+      text-align: center;
+      margin-top: 3rem;
+      font-style: italic;
+      color: #ccc0ff;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.7rem;
+    }
+
+    /* animación flotante */
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* marcador para imagen de chibi/avatar */
+    .avatar {
+      width: 130px;
+      height: 130px;
+      background: #fff;
+      border-radius: 50%;
+      margin: auto;
+      margin-bottom: 1rem;
+      border: 3px solid #ffc6e2;
+      background-image: url('https://placekitten.com/130/130'); /* reemplaza con tu dibujo */
+      background-size: cover;
+      background-position: center;
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
-    <h1>Zayzay</h1>
+    <div class="avatar"></div>
+    <h1>ZAYZAY</h1>
     <p>im not rain bi ✨🧃💿💖🍓</p>
   </header>
 
@@ -78,7 +147,7 @@
   </nav>
 
   <main>
-    <p>Bienvenida a tu espacio nocturno ✨. Elige una sección para explorar tu diario digital aesthetic 💫</p>
+    <p style="text-align:center;">Bienvenida a tu diario pastel-grunge pixelado 💿✨<br/>Elige una sección para expresarte y brillar 🌈</p>
 
     <div class="cards-container">
       <a class="card" href="musica.html">🎧 Música</a>
@@ -90,8 +159,7 @@
   </main>
 
   <footer>
-    <p>💖 Gracias por visitar mi rincón estrellado. ¡Sigue brillando siempre! ✨🌙</p>
+    💖 Gracias por visitar mi universo flotante 🌌
   </footer>
-
 </body>
 </html>
