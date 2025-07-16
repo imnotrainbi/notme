@@ -1,16 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Música - Zayzay</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🎵 Playlists | Zayzay</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .playlist {
+      background: #2e3a50;
+      border: 2px solid #ffc6e2;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s, filter 0.3s;
+      text-align: center;
+      animation: float 6s ease-in-out infinite;
+    }
+    .playlist:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 6px 20px rgba(255,255,255,0.3);
+      background: #3b4d66;
+      filter: brightness(1.1) drop-shadow(0 0 10px #ffc6e2);
+    }
+    .playlist img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .playlist-content {
+      padding: 1rem;
+    }
+    .playlist-content h3 {
+      margin: 0.5rem 0;
+      color: #ffe6fa;
+    }
+    .playlist-content p {
+      font-size: 0.9rem;
+      color: #ddd;
+      margin-bottom: 1rem;
+    }
+    .playlist-content a {
+      text-decoration: none;
+      background: #ffc6e2;
+      color: #1b2534;
+      padding: 0.4rem 1rem;
+      border-radius: 1rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .playlist-content a:hover {
+      background: #ffd9ec;
+    }
+    .music-controls {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .music-controls button {
+      background: #ffc6e2;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: #1b2534;
+    }
+    .music-controls button:hover {
+      background: #ffd9ec;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>🎧 Música</h1>
-    <p>Tus moods, canciones favoritas y vibes musicales 💿✨</p>
+    <div class="avatar"></div>
+    <h1>ZAYZAY</h1>
+    <p>im not rain bi ✨🧃💿💖🍓</p>
   </header>
 
   <nav>
@@ -21,10 +91,78 @@
     <a href="artistas.html">🎤 Artistas</a>
   </nav>
 
-  <section>
-    <h2>Playlists</h2>
-    <p>Agrega tus playlists favoritas o canciones según tu estado de ánimo ✨</p>
-    <!-- Aquí puedes insertar un iframe de Spotify -->
-  </section>
+  <main>
+    <h2 style="text-align:center; font-family: 'Press Start 2P', cursive; color: #ffe6fa;">🎧 Mis Playlists</h2>
+
+    <div class="music-controls">
+      <audio id="bg-music" src="https://dl.sndup.net/qqgq/IWALY-ILAND2.mp3" autoplay loop></audio>
+      <button onclick="toggleMusic()">⏸ Pausar Música</button>
+    </div>
+
+    <div class="cards-container">
+      <div class="playlist">
+        <img src="https://i.pinimg.com/originals/29/17/3b/29173b29d26a8df5d476f61ffcd4a837.jpg" alt="cover" />
+        <div class="playlist-content">
+          <h3>🌙 Chill Nights</h3>
+          <p>Lo-fi suave para estudiar o soñar despierta</p>
+          <a href="#">Ver Playlist</a>
+        </div>
+      </div>
+
+      <div class="playlist">
+        <img src="https://i.pinimg.com/564x/f0/9b/f5/f09bf5107f97b432527f12e6d267ee6e.jpg" alt="cover" />
+        <div class="playlist-content">
+          <h3>💘 Romantic Feels</h3>
+          <p>Baladas, acústico y algo de drama 🎻</p>
+          <a href="#">Ver Playlist</a>
+        </div>
+      </div>
+
+      <div class="playlist">
+        <img src="https://i.pinimg.com/564x/9a/d9/79/9ad979305119db1fefea35a3b6e24302.jpg" alt="cover" />
+        <div class="playlist-content">
+          <h3>🪩 Dance Break</h3>
+          <p>K-pop + Pop energético para moverte</p>
+          <a href="#">Ver Playlist</a>
+        </div>
+      </div>
+
+      <div class="playlist">
+        <img src="https://i.pinimg.com/564x/fc/5f/3f/fc5f3f60f76fba14f064733f16edc1b4.jpg" alt="cover" />
+        <div class="playlist-content">
+          <h3>🍰 Softcore</h3>
+          <p>Clairo, beabadoobee, vibes tiernos 🧁</p>
+          <a href="#">Ver Playlist</a>
+        </div>
+      </div>
+
+      <div class="playlist">
+        <img src="https://i.pinimg.com/564x/ae/2a/e4/ae2ae4edc9e00f15213981bc3fe24612.jpg" alt="cover" />
+        <div class="playlist-content">
+          <h3>🌀 Dream Pop</h3>
+          <p>Brillos, reverbs, flotación mental 💭</p>
+          <a href="#">Ver Playlist</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    🎶 Este es el ritmo de Zayzay 💿
+  </footer>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    const btn = document.querySelector('button');
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        btn.textContent = '⏸ Pausar Música';
+      } else {
+        music.pause();
+        btn.textContent = '▶️ Reanudar Música';
+      }
+    }
+  </script>
 </body>
 </html>
