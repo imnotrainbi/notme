@@ -2,50 +2,182 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Artistas Favoritos | Zayzay</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎤 Artistas | Zayzay</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png'), #0d1b2a;
+      color: #fff;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .avatar {
+      width: 130px;
+      height: 130px;
+      background: #fff;
+      border-radius: 50%;
+      margin: auto;
+      margin-bottom: 1rem;
+      border: 3px solid #ffc6e2;
+      background-image: url('favicon.png');
+      background-size: cover;
+      background-position: center;
+    }
+    header h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.8rem;
+      color: #ffe6fa;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1rem;
+      font-style: italic;
+      color: #c6baff;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      text-decoration: none;
+      background: #1e293b;
+      color: #fefefe;
+      padding: 0.6rem 1.2rem;
+      border-radius: 1.2rem;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, background 0.3s;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #334155;
+      transform: scale(1.08);
+    }
+    h2 {
+      text-align: center;
+      font-family: 'Press Start 2P', cursive;
+      color: #ffe6fa;
+      margin-bottom: 2rem;
+    }
+    .artist-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .artist-card {
+      background: #2e3a50;
+      border: 2px dashed #ffc6e2;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s;
+      animation: float 6s ease-in-out infinite;
+    }
+    .artist-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 20px rgba(255,255,255,0.2);
+    }
+    .artist-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .artist-info {
+      padding: 1rem;
+    }
+    .artist-info h3 {
+      color: #ffe6fa;
+      margin-bottom: 0.5rem;
+    }
+    .artist-info p {
+      font-size: 0.9rem;
+      color: #ddd;
+      margin-bottom: 1rem;
+    }
+    .artist-info a {
+      text-decoration: none;
+      background: #ffc6e2;
+      color: #1b2534;
+      padding: 0.4rem 1rem;
+      border-radius: 1rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .artist-info a:hover {
+      background: #ffd9ec;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-style: italic;
+      color: #ccc0ff;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.7rem;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Mis Artistas Favs</h1>
-    <p>✨ Donde vibro con su música 🎷💖</p>
+    <div class="avatar"></div>
+    <h1>ZAYZAY</h1>
+    <p>im not rain bi ✨🧃💿💖🍓</p>
   </header>
 
   <nav>
     <a href="index.html">🏠 Inicio</a>
-    <a href="musica.html">🎷 Música</a>
+    <a href="musica.html">🎧 Música</a>
     <a href="galeria.html">📸 Galería</a>
     <a href="inspiracion.html">📌 Inspiración</a>
     <a href="cine.html">🎬 Cine & Series</a>
-    <a href="artistas.html">🎤 Artistas</a>
   </nav>
 
   <main>
-    <section>
-      <h2>🎤 Solistas</h2>
-      <ul>
-        <li>🌸 IU</li>
-        <li>🌈 Billie Eilish</li>
-        <li>🌛 Taeyeon</li>
-        <li>🧓 Taylor Swift</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🧰 Grupos</h2>
-      <ul>
-        <li>🎀 BTS</li>
-        <li>🍓 NewJeans</li>
-        <li>💖 BLACKPINK</li>
-        <li>🌟 TWICE</li>
-      </ul>
-    </section>
+    <h2>🎤 Artistas Favoritos</h2>
+    <div class="artist-container">
+      <div class="artist-card">
+        <img src="https://i.pinimg.com/564x/46/d1/3b/46d13bb7ec27489e17b9021b9bb30650.jpg" alt="IU" />
+        <div class="artist-info">
+          <h3>IU</h3>
+          <p>Álbum favorito: Palette 💿<br/>Canción favorita: Through the Night 🌙</p>
+          <a href="#">Spotify</a>
+        </div>
+      </div>
+      <div class="artist-card">
+        <img src="https://i.pinimg.com/564x/f3/5d/88/f35d88ae1f0e973a64b46042e4cdd818.jpg" alt="NewJeans" />
+        <div class="artist-info">
+          <h3>NewJeans</h3>
+          <p>Álbum favorito: Get Up ✨<br/>Canción favorita: ETA 🧃</p>
+          <a href="#">Spotify</a>
+        </div>
+      </div>
+      <div class="artist-card">
+        <img src="https://i.pinimg.com/564x/e9/69/c4/e969c437305cc7e89b5f493b01317712.jpg" alt="The Rose" />
+        <div class="artist-info">
+          <h3>The Rose</h3>
+          <p>Álbum favorito: Heal 🌸<br/>Canción favorita: She's in the Rain 💧</p>
+          <a href="#">Spotify</a>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>💿 Siempre escuchando con el corazón. Gracias por pasar por aquí 🎶✨</p>
+    🎤 Estos artistas llenan tu alma, Zayzay 💖
   </footer>
 </body>
 </html>
