@@ -1,16 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cine & Series - Zayzay</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>🎬 Cine & Series | Zayzay</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png'), #0d1b2a;
+      background-repeat: repeat;
+      color: #fff;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      animation: float 6s ease-in-out infinite;
+    }
+    .avatar {
+      width: 130px;
+      height: 130px;
+      background: #fff;
+      border-radius: 50%;
+      margin: auto;
+      margin-bottom: 1rem;
+      border: 3px solid #ffc6e2;
+      background-image: url('favicon.png');
+      background-size: cover;
+      background-position: center;
+    }
+    header h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.8rem;
+      color: #ffe6fa;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1rem;
+      font-style: italic;
+      color: #c6baff;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      text-decoration: none;
+      background: #1e293b;
+      color: #fefefe;
+      padding: 0.6rem 1.2rem;
+      border-radius: 1.2rem;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, background 0.3s;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #334155;
+      transform: scale(1.08);
+    }
+    .section {
+      margin-bottom: 3rem;
+    }
+    .section h2 {
+      font-size: 1.4rem;
+      color: #ffc6e2;
+      border-left: 4px solid #ffc6e2;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: #2e3a50;
+      border: 2px solid #ffc6e2;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 20px rgba(255,255,255,0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 0.8rem;
+    }
+    .card-content h3 {
+      margin: 0.5rem 0;
+      color: #ffe6fa;
+    }
+    .stars {
+      color: #ffd700;
+      font-size: 1rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-style: italic;
+      color: #ccc0ff;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.7rem;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>🎬 Cine & Series</h1>
-    <p>Tus pelis y series favoritas con tu toque aesthetic 🍿💖</p>
+    <div class="avatar"></div>
+    <h1>ZAYZAY</h1>
+    <p>im not rain bi ✨🧃💿💖🍓</p>
   </header>
 
   <nav>
@@ -18,24 +135,53 @@
     <a href="musica.html">🎧 Música</a>
     <a href="galeria.html">📸 Galería</a>
     <a href="inspiracion.html">📌 Inspiración</a>
-      <a href="artistas.html">🎤 Artistas</a>
+    <a href="artistas.html">🎤 Artistas</a>
   </nav>
 
-  <section>
-    <h2>Lo que vi</h2>
-    <p>Agrega tus reseñas, emojis y frases favoritas de las pelis o series que viste 💬</p>
-
-    <div style="background: #ffd5ec; padding: 1rem; border-radius: 1rem; margin-bottom: 1rem;">
-      <h3>💿 Barbie (2023)</h3>
-      <p>“She's everything. He’s just Ken.”</p>
-      <p>Mi nota: 💖💖💖💖💖</p>
+  <main>
+    <div class="section">
+      <h2>📺 Series Favoritas</h2>
+      <div class="cards-container">
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/f4/ea/b9/f4eab9b734760d15d9a3f107f847f528.jpg" alt="Series 1" />
+          <div class="card-content">
+            <h3>Twenty-Five Twenty-One</h3>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/b4/02/3c/b4023cc73b7e84f2d5d40e3d41f2ea2e.jpg" alt="Series 2" />
+          <div class="card-content">
+            <h3>Lovely Runner</h3>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div style="background: #d3f3ff; padding: 1rem; border-radius: 1rem; margin-bottom: 1rem;">
-      <h3>🧃 Heartstopper</h3>
-      <p>“You don't get to have an opinion about something you know nothing about.”</p>
-      <p>Mi nota: ✨✨✨✨✨</p>
+    <div class="section">
+      <h2>🎞 Películas Que Amas</h2>
+      <div class="cards-container">
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/2b/f3/9e/2bf39e29e48ecb4f89b612b6a35f6509.jpg" alt="Película 1" />
+          <div class="card-content">
+            <h3>Your Name</h3>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/f6/f5/2c/f6f52c1090e91a46293138d6ef7f2efb.jpg" alt="Película 2" />
+          <div class="card-content">
+            <h3>La La Land</h3>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </main>
+
+  <footer>
+    🎥 Cine & Series con corazón 💖 Zayzay
+  </footer>
 </body>
 </html>
