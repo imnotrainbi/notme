@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zayzay | im not rain bi</title>
 
-  <!-- Ícono de pestaña -->
   <link rel="icon" type="image/png" href="favicon.png" />
-
-  <!-- Tipos de letra -->
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
 
   <style>
@@ -54,30 +51,6 @@
       color: #c6baff;
     }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      background: #1e293b;
-      color: #fefefe;
-      padding: 0.6rem 1.2rem;
-      border-radius: 1.2rem;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, background 0.3s;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      background: #334155;
-      transform: scale(1.08);
-    }
-
     main {
       max-width: 850px;
       margin: auto;
@@ -115,6 +88,46 @@
       background: #3b4d66;
     }
 
+    .moodboard {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      flex-wrap: wrap;
+    }
+
+    .moodboard img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 1rem;
+      border: 2px solid #ffc6e2;
+      transition: filter 0.3s;
+    }
+
+    .moodboard img:hover {
+      filter: brightness(1.2);
+    }
+
+    .music-controls {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .music-controls button {
+      background: #ffc6e2;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: #1b2534;
+    }
+
+    .music-controls button:hover {
+      background: #ffd9ec;
+    }
+
     footer {
       text-align: center;
       margin-top: 3rem;
@@ -131,7 +144,6 @@
     }
   </style>
 </head>
-
 <body>
   <header>
     <div class="avatar"></div>
@@ -140,6 +152,12 @@
   </header>
 
   <main>
+    <div class="music-controls">
+      <audio id="bg-music" src="https://dl.sndup.net/qqgq/IWALY-ILAND2.mp3" autoplay loop></audio>
+      <button onclick="toggleMusic()">⏸ Pausar Música</button>
+    </div>
+
+    <h3 style="text-align:center; color:#c6baff; font-style:italic;">🌸 Bienvenida a mi rincón pastel cósmico 🌙</h3>
     <p style="text-align:center;">Bienvenida a tu diario pastel-grunge pixelado 💿✨<br/>Elige una sección para expresarte y brillar 🌈</p>
 
     <div class="cards-container">
@@ -148,11 +166,33 @@
       <a class="card" href="inspiracion.html">📌 Inspiración</a>
       <a class="card" href="cine.html">🎬 Cine & Series</a>
       <a class="card" href="artistas.html">🎤 Artistas Favoritos</a>
+      <a class="card" href="sobremi.html">💌 Sobre mí</a>
+    </div>
+
+    <div class="moodboard">
+      <img src="https://i.pinimg.com/564x/5f/25/68/5f2568a8a13e3061e46f6e983227da56.jpg" alt="mood1" />
+      <img src="https://i.pinimg.com/564x/8e/f5/2d/8ef52df55d4e5e1c0a0e2042eebbbef0.jpg" alt="mood2" />
+      <img src="https://i.pinimg.com/564x/57/f4/eb/57f4ebbde12e0f23e26fd6d7ad49b1a5.jpg" alt="mood3" />
+      <img src="https://i.pinimg.com/564x/e7/9e/1c/e79e1c9a87568458e0ea846c2e46e61f.jpg" alt="mood4" />
     </div>
   </main>
 
   <footer>
     💖 Gracias por visitar mi universo flotante 🌌
   </footer>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    const btn = document.querySelector('.music-controls button');
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        btn.textContent = '⏸ Pausar Música';
+      } else {
+        music.pause();
+        btn.textContent = '▶️ Reanudar Música';
+      }
+    }
+  </script>
 </body>
 </html>
